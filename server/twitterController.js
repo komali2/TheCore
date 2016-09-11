@@ -6,11 +6,11 @@ module.exports = {
   }
 
   stringifyAllTweets = function(tweets){
-    var string = '';
-    tweets.forEach(tweet){
-      string = string + ' ' + tweet.text;
-    }
-    return string;
+    var str = '';
+    tweets.forEach((tweet)=>{
+      str = str + ' ' + tweet.text;
+      return str;
+    });
   }
 
 
