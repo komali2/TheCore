@@ -5,7 +5,7 @@ var db = require('./databaseAPI');
 module.exports = {
   getUserTweets: function(username, cb){
     var listOfTweets = [];
-    db.getUserTwitterHandle(username).then((snapshot) => {
+    db.getUserHandle(username, 'twitter').then((snapshot) => {
       if(!snapshot){
         console.log("error!");
       }else{
