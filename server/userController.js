@@ -1,7 +1,12 @@
 var request = require('request');
 
+
 module.exports = {
   register: function(req, res){
+    db.createUser(req.body.username, {
+      facebook: req.body.facebook,
+      uber: req.body.uber
+    })
     res.send('got post for user/register');
   },
 
